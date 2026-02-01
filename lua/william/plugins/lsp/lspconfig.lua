@@ -157,8 +157,8 @@ return {
     --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
     local servers = {
       clangd = {},
-      pyright = {},
-      tailwindcss = {},
+      -- pyright = {},
+      -- tailwindcss = {},
       denols = {},
       lua_ls = {
         settings = {
@@ -173,9 +173,9 @@ return {
 
     -- Ensure the servers and tools above are installed
     local ensure_installed = vim.tbl_keys(servers or {})
-    vim.list_extend(ensure_installed, {
-      'stylua', -- Used to format Lua code
-    })
+    -- vim.list_extend(ensure_installed, {
+      -- 'stylua', -- Used to format Lua code
+    -- })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
     require('mason-lspconfig').setup {

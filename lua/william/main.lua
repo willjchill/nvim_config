@@ -51,7 +51,7 @@ return function()
   vim.opt.inccommand = 'split'
 
   -- Show which line your cursor is on
-  vim.opt.cursorline = true
+  vim.opt.cursorline = false
 
   -- Minimal number of screen lines to keep above and below the cursor.
   vim.opt.scrolloff = 10
@@ -76,8 +76,8 @@ return function()
   vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
   -- Keybinds to easily allow to split window
-  vim.keymap.set('n', '<leader><C-b>%', ':vsplit<CR>', { desc = 'Vertical window split' })
-  vim.keymap.set('n', '<leader><C-b>"', ':split<CR>', { desc = 'Vertical window split' })
+  vim.keymap.set('n', '<leader>v', ':vsplit<CR>', { desc = 'Vertical window split' })
+  vim.keymap.set('n', '<leader>h', ':split<CR>', { desc = 'Vertical window split' })
 
   -- Keybinds to make split navigation easier.
   --  Use CTRL+<hjkl> to switch between windows
